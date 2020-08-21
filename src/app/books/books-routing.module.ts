@@ -5,7 +5,6 @@ import { BooksComponent } from './books/books/books.component';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', component: BooksComponent },
-    { path: 'books', component: BooksComponent },
 ];
 
 @NgModule({
