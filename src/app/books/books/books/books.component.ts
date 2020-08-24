@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BooksService } from './../../services/books.service';
+import { AuthorService } from './../../services/authors.service';
+import { GenresService } from './../../services/genres.service';
 import { IBook } from './../../interfaces/book';
+import { IGenre } from './../../interfaces/genre';
 
 @Component({
   selector: 'app-books',
@@ -10,7 +13,11 @@ import { IBook } from './../../interfaces/book';
 })
 export class BooksComponent implements OnInit {
 
-  constructor(private booksService: BooksService) { }
+  constructor(
+    private booksService: BooksService,
+    private authorsService: AuthorService,
+    private genresService: GenresService,
+    ) { }
 
   public ngOnInit(): void {
     // this.booksService.getBooks()
@@ -18,7 +25,17 @@ export class BooksComponent implements OnInit {
     //     (el) => {
     //       console.log(el);
     //     });
-    // this.booksService.getBookById(1)
+    // this.genresService.getGenres()
+    //   .subscribe(
+    //       (el) => {
+    //         console.log(el);
+    //       });
+    // this.genresService.getGenreById(5)
+    //   .subscribe(
+    //         (el) => {
+    //           console.log(el);
+    //         });
+      // this.booksService.getBookById(1)
     //   .subscribe(
     //       (el) => {
     //         console.log(el);

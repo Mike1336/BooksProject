@@ -1,3 +1,5 @@
+import { IAuthor } from './author';
+
 export interface IBook {
 
   id: number;
@@ -14,10 +16,6 @@ export interface IBook {
   image: string;
   writing_date: string;
   release_date: string;
-  author: {
-    id: number;
-    first_name: string;
-    last_name: string;
-  };
+  author: IAuthor;
 
 }

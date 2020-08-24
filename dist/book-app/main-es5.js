@@ -68,25 +68,23 @@
       /*! @angular/router */
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
-      var routes = [// {
-        //   path: '',
-        //   children: [
-        //     {
-        //       path: '',
-        //       pathMatch: 'full',
-        //       redirectTo: 'books',
-        //     },
-        //     {
-        //       path: 'books',
-        //       loadChildren: () => import('./books/books.module').then((m) => m.BooksModule),
-        //     },
-        //   ],
-        // },
-        // {
-        //   path: '**',
-        //   redirectTo: '/',
-        // },
-      ];
+      var routes = [{
+        path: '',
+        children: [{
+          path: '',
+          pathMatch: 'full',
+          loadChildren: function loadChildren() {
+            return Promise.resolve().then(__webpack_require__.bind(null,
+            /*! ./books/books.module */
+            "./src/app/books/books.module.ts")).then(function (m) {
+              return m.BooksModule;
+            });
+          }
+        }]
+      }, {
+        path: '**',
+        redirectTo: ''
+      }];
 
       var AppRoutingModule = function AppRoutingModule() {
         _classCallCheck(this, AppRoutingModule);
@@ -245,25 +243,31 @@
       /* harmony import */
 
 
-      var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./app-routing.module */
-      "./src/app/app-routing.module.ts");
-      /* harmony import */
-
-
-      var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./app.component */
-      "./src/app/app.component.ts");
-      /* harmony import */
-
-
-      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/platform-browser/animations */
       "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
       /* harmony import */
 
 
-      var _layout_layout_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./app-routing.module */
+      "./src/app/app-routing.module.ts");
+      /* harmony import */
+
+
+      var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ./app.component */
+      "./src/app/app.component.ts");
+      /* harmony import */
+
+
+      var _books_books_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ./books/books.module */
+      "./src/app/books/books.module.ts");
+      /* harmony import */
+
+
+      var _layout_layout_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ./layout/layout.module */
       "./src/app/layout/layout.module.ts");
 
@@ -273,20 +277,20 @@
 
       AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
         type: AppModule,
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
       });
       AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
         factory: function AppModule_Factory(t) {
           return new (t || AppModule)();
         },
         providers: [],
-        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _layout_layout_module__WEBPACK_IMPORTED_MODULE_5__["LayoutModule"]]]
+        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _books_books_module__WEBPACK_IMPORTED_MODULE_5__["BooksModule"], _layout_layout_module__WEBPACK_IMPORTED_MODULE_6__["LayoutModule"]]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, {
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _layout_layout_module__WEBPACK_IMPORTED_MODULE_5__["LayoutModule"]]
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _books_books_module__WEBPACK_IMPORTED_MODULE_5__["BooksModule"], _layout_layout_module__WEBPACK_IMPORTED_MODULE_6__["LayoutModule"]]
         });
       })();
       /*@__PURE__*/
@@ -296,12 +300,392 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _layout_layout_module__WEBPACK_IMPORTED_MODULE_5__["LayoutModule"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _books_books_module__WEBPACK_IMPORTED_MODULE_5__["BooksModule"], _layout_layout_module__WEBPACK_IMPORTED_MODULE_6__["LayoutModule"]],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
           }]
         }], null, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/books/books-routing.module.ts":
+    /*!***********************************************!*\
+      !*** ./src/app/books/books-routing.module.ts ***!
+      \***********************************************/
+
+    /*! exports provided: BooksRoutingModule */
+
+    /***/
+    function srcAppBooksBooksRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BooksRoutingModule", function () {
+        return BooksRoutingModule;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var _books_books_books_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./books/books/books.component */
+      "./src/app/books/books/books/books.component.ts");
+
+      var routes = [{
+        path: '',
+        pathMatch: 'full',
+        component: _books_books_books_component__WEBPACK_IMPORTED_MODULE_2__["BooksComponent"]
+      }];
+
+      var BooksRoutingModule = function BooksRoutingModule() {
+        _classCallCheck(this, BooksRoutingModule);
+      };
+
+      BooksRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+        type: BooksRoutingModule
+      });
+      BooksRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+        factory: function BooksRoutingModule_Factory(t) {
+          return new (t || BooksRoutingModule)();
+        },
+        imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+      });
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](BooksRoutingModule, {
+          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]],
+          exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        });
+      })();
+      /*@__PURE__*/
+
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BooksRoutingModule, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+          args: [{
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+          }]
+        }], null, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/books/books.module.ts":
+    /*!***************************************!*\
+      !*** ./src/app/books/books.module.ts ***!
+      \***************************************/
+
+    /*! exports provided: BooksModule */
+
+    /***/
+    function srcAppBooksBooksModuleTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BooksModule", function () {
+        return BooksModule;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var _books_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./books-routing.module */
+      "./src/app/books/books-routing.module.ts");
+      /* harmony import */
+
+
+      var _books_books_books_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ./books/books/books.component */
+      "./src/app/books/books/books/books.component.ts");
+
+      var BooksModule = function BooksModule() {
+        _classCallCheck(this, BooksModule);
+      };
+
+      BooksModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+        type: BooksModule
+      });
+      BooksModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+        factory: function BooksModule_Factory(t) {
+          return new (t || BooksModule)();
+        },
+        imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _books_routing_module__WEBPACK_IMPORTED_MODULE_3__["BooksRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]]]
+      });
+
+      (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](BooksModule, {
+          declarations: [_books_books_books_component__WEBPACK_IMPORTED_MODULE_4__["BooksComponent"]],
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _books_routing_module__WEBPACK_IMPORTED_MODULE_3__["BooksRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]]
+        });
+      })();
+      /*@__PURE__*/
+
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BooksModule, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+          args: [{
+            declarations: [_books_books_books_component__WEBPACK_IMPORTED_MODULE_4__["BooksComponent"]],
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _books_routing_module__WEBPACK_IMPORTED_MODULE_3__["BooksRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]]
+          }]
+        }], null, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/books/books/books/books.component.ts":
+    /*!******************************************************!*\
+      !*** ./src/app/books/books/books/books.component.ts ***!
+      \******************************************************/
+
+    /*! exports provided: BooksComponent */
+
+    /***/
+    function srcAppBooksBooksBooksBooksComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BooksComponent", function () {
+        return BooksComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _services_books_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./../../services/books.service */
+      "./src/app/books/services/books.service.ts");
+
+      var BooksComponent = /*#__PURE__*/function () {
+        function BooksComponent(booksService) {
+          _classCallCheck(this, BooksComponent);
+
+          this.booksService = booksService;
+        }
+
+        _createClass(BooksComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.booksService.getBooks().subscribe(function (el) {
+              console.log(el);
+            });
+            this.booksService.getAuthors().subscribe(function (el) {
+              console.log(el);
+            }); // this.booksService.getBookById(1)
+            //   .subscribe(
+            //       (el) => {
+            //         console.log(el);
+            //       });
+            // this.booksService.getBookByAuthor(3)
+            //   .subscribe(
+            //         (el) => {
+            //           console.log(el);
+            //         });
+          }
+        }]);
+
+        return BooksComponent;
+      }();
+
+      BooksComponent.ɵfac = function BooksComponent_Factory(t) {
+        return new (t || BooksComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_books_service__WEBPACK_IMPORTED_MODULE_1__["BooksService"]));
+      };
+
+      BooksComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: BooksComponent,
+        selectors: [["app-books"]],
+        decls: 2,
+        vars: 0,
+        template: function BooksComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "books works!");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+        },
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Jvb2tzL2Jvb2tzL2Jvb2tzL2Jvb2tzLmNvbXBvbmVudC5zY3NzIn0= */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BooksComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-books',
+            templateUrl: './books.component.html',
+            styleUrls: ['./books.component.scss']
+          }]
+        }], function () {
+          return [{
+            type: _services_books_service__WEBPACK_IMPORTED_MODULE_1__["BooksService"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/books/services/books.service.ts":
+    /*!*************************************************!*\
+      !*** ./src/app/books/services/books.service.ts ***!
+      \*************************************************/
+
+    /*! exports provided: BooksService */
+
+    /***/
+    function srcAppBooksServicesBooksServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BooksService", function () {
+        return BooksService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var BooksService = /*#__PURE__*/function () {
+        function BooksService(http) {
+          _classCallCheck(this, BooksService);
+
+          this.http = http;
+          this.apiUrl = 'http://muzhikov.kubesh.ru/api/';
+          this.booksEndpoint = 'books';
+          this.authorsEndpoint = 'authors';
+        }
+
+        _createClass(BooksService, [{
+          key: "getBooks",
+          value: function getBooks() {
+            return this.http.get("".concat(this.apiUrl).concat(this.booksEndpoint));
+          }
+        }, {
+          key: "getBookById",
+          value: function getBookById(bookId) {
+            return this.http.get("".concat(this.apiUrl).concat(this.booksEndpoint, "/").concat(bookId));
+          }
+        }, {
+          key: "getBookByAuthor",
+          value: function getBookByAuthor(authorId) {
+            return this.http.get("".concat(this.apiUrl).concat(this.authorsEndpoint, "/").concat(authorId, "/").concat(this.booksEndpoint));
+          }
+        }, {
+          key: "createBook",
+          value: function createBook(book) {
+            var url = "".concat(this.apiUrl).concat(this.authorsEndpoint, "/").concat(book.author_id, "/").concat(this.booksEndpoint);
+            return this.http.post(url, book);
+          }
+        }, {
+          key: "updateBook",
+          value: function updateBook(book) {
+            var url = "".concat(this.apiUrl).concat(this.booksEndpoint, "/").concat(book.id);
+            return this.http.put(url, book);
+          }
+        }, {
+          key: "deleteBook",
+          value: function deleteBook(bookId) {
+            return this.http["delete"]("".concat(this.apiUrl).concat(this.booksEndpoint, "/").concat(bookId));
+          }
+        }, {
+          key: "getAuthors",
+          value: function getAuthors() {
+            return this.http.get("".concat(this.apiUrl).concat(this.authorsEndpoint));
+          }
+        }]);
+
+        return BooksService;
+      }();
+
+      BooksService.ɵfac = function BooksService_Factory(t) {
+        return new (t || BooksService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]));
+      };
+
+      BooksService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: BooksService,
+        factory: BooksService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BooksService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+          }];
+        }, null);
       })();
       /***/
 
