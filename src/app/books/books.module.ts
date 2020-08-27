@@ -7,16 +7,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './components/books/books.component';
 import { DetailsComponent } from './components/details/details.component';
+import { CommaPipe } from './pipes/comma.pipe';
 
 
 @NgModule({
   declarations: [
     BooksComponent,
     DetailsComponent,
+    CommaPipe,
   ],
   imports: [
     CommonModule,
@@ -27,6 +31,8 @@ import { DetailsComponent } from './components/details/details.component';
     MatInputModule,
     MatPaginatorModule,
     MatTableModule,
+    MatGridListModule,
+    MatCardModule,
   ],
   bootstrap: [],
 })

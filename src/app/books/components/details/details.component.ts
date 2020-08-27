@@ -7,7 +7,7 @@ import { IBook } from './../../interfaces/book';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
 
@@ -20,14 +20,15 @@ export class DetailsComponent implements OnInit {
     ) { }
 
   public ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.bookId = params.id;
-      console.log(this.bookId);
-    });
+    this.route.params
+      .subscribe((params) => {
+        this.bookId = params.id;
+      });
     this.booksService.getBookById(this.bookId)
       .subscribe((data) => {
         this.book = data;
         console.log(this.book);
       });
   }
+
 }

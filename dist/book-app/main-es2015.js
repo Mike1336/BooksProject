@@ -243,8 +243,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _books_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./books-routing.module */ "./src/app/books/books-routing.module.ts");
 /* harmony import */ var _components_books_books_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/books/books.component */ "./src/app/books/components/books/books.component.ts");
 /* harmony import */ var _components_details_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/details/details.component */ "./src/app/books/components/details/details.component.ts");
-/* harmony import */ var _components_book_app_book_app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/book-app/book-app.component */ "./src/app/books/components/book-app/book-app.component.ts");
-
 
 
 
@@ -271,8 +269,7 @@ BooksModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
             _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](BooksModule, { declarations: [_components_books_books_component__WEBPACK_IMPORTED_MODULE_9__["BooksComponent"],
-        _components_details_details_component__WEBPACK_IMPORTED_MODULE_10__["DetailsComponent"],
-        _components_book_app_book_app_component__WEBPACK_IMPORTED_MODULE_11__["BookAppComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _components_details_details_component__WEBPACK_IMPORTED_MODULE_10__["DetailsComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
         _books_routing_module__WEBPACK_IMPORTED_MODULE_8__["BooksRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
@@ -286,7 +283,6 @@ BooksModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
                 declarations: [
                     _components_books_books_component__WEBPACK_IMPORTED_MODULE_9__["BooksComponent"],
                     _components_details_details_component__WEBPACK_IMPORTED_MODULE_10__["DetailsComponent"],
-                    _components_book_app_book_app_component__WEBPACK_IMPORTED_MODULE_11__["BookAppComponent"],
                 ],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -298,44 +294,9 @@ BooksModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
                     _angular_material_paginator__WEBPACK_IMPORTED_MODULE_6__["MatPaginatorModule"],
                     _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
                 ],
+                bootstrap: [],
             }]
     }], null, null); })();
-
-
-/***/ }),
-
-/***/ "./src/app/books/components/book-app/book-app.component.ts":
-/*!*****************************************************************!*\
-  !*** ./src/app/books/components/book-app/book-app.component.ts ***!
-  \*****************************************************************/
-/*! exports provided: BookAppComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BookAppComponent", function() { return BookAppComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-
-
-
-class BookAppComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-}
-BookAppComponent.ɵfac = function BookAppComponent_Factory(t) { return new (t || BookAppComponent)(); };
-BookAppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BookAppComponent, selectors: [["app-book-app"]], decls: 1, vars: 0, template: function BookAppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet");
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Jvb2tzL2NvbXBvbmVudHMvYm9vay1hcHAvYm9vay1hcHAuY29tcG9uZW50LnNjc3MifQ== */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BookAppComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
-        args: [{
-                selector: 'app-book-app',
-                templateUrl: './book-app.component.html',
-                styleUrls: ['./book-app.component.scss']
-            }]
-    }], function () { return []; }, null); })();
 
 
 /***/ }),
