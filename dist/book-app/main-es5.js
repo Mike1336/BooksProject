@@ -69,9 +69,9 @@
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
       var routes = [{
-        path: 'books/page/:number',
+        path: 'books',
         children: [{
-          path: '',
+          path: 'page',
           loadChildren: function loadChildren() {
             return Promise.resolve().then(__webpack_require__.bind(null,
             /*! ./books/books.module */
@@ -79,11 +79,14 @@
               return m.BooksModule;
             });
           }
+        }, {
+          path: '**',
+          redirectTo: 'page/1'
         }]
       }, {
-        path: 'authors/page/:number',
+        path: 'authors',
         children: [{
-          path: '',
+          path: 'page',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
             /*! import() | authors-authors-module */
@@ -93,6 +96,9 @@
               return m.AuthorsModule;
             });
           }
+        }, {
+          path: '**',
+          redirectTo: 'page/1'
         }]
       }, {
         path: '**',
@@ -219,7 +225,7 @@
           }
         },
         directives: [_layout_header_header_component__WEBPACK_IMPORTED_MODULE_1__["HeaderComponent"], _layout_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_2__["SidebarComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]],
-        styles: ["#content[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 45px auto;\n  grid-template-rows: 56px auto;\n}\n#content[_ngcontent-%COMP%]   header[_ngcontent-%COMP%] {\n  grid-row: 1;\n  grid-column: 1/3;\n}\n#content[_ngcontent-%COMP%]   #sidebar[_ngcontent-%COMP%] {\n  grid-row: 2;\n  grid-column: 1;\n  background-color: #8053a3;\n}\n#content[_ngcontent-%COMP%]   main[_ngcontent-%COMP%] {\n  grid-row: 2;\n  grid-column: 2;\n  display: flex;\n  justify-content: center;\n  align-self: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtFQUNBLGdDQUFBO0VBQ0EsNkJBQUE7QUFDSjtBQUFJO0VBQ0UsV0FBQTtFQUNBLGdCQUFBO0FBRU47QUFBSTtFQUNFLFdBQUE7RUFDQSxjQUFBO0VBQ0EseUJBQUE7QUFFTjtBQUFJO0VBQ0UsV0FBQTtFQUNBLGNBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtBQUVOIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2NvbnRlbnQge1xuICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiA0NXB4IGF1dG87XG4gICAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiA1NnB4IGF1dG87XG4gICAgaGVhZGVyIHtcbiAgICAgIGdyaWQtcm93OiAxO1xuICAgICAgZ3JpZC1jb2x1bW46IDEvMztcbiAgICB9XG4gICAgI3NpZGViYXJ7XG4gICAgICBncmlkLXJvdzogMjtcbiAgICAgIGdyaWQtY29sdW1uOiAxO1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzgwNTNhMztcbiAgICB9XG4gICAgbWFpbntcbiAgICAgIGdyaWQtcm93OiAyO1xuICAgICAgZ3JpZC1jb2x1bW46IDI7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG4gICAgfVxuICB9Il19 */"]
+        styles: ["#content[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 45px auto;\n  grid-template-rows: 56px auto;\n}\n#content[_ngcontent-%COMP%]   header[_ngcontent-%COMP%] {\n  grid-row: 1;\n  grid-column: 1/3;\n}\n#content[_ngcontent-%COMP%]   #sidebar[_ngcontent-%COMP%] {\n  grid-row: 2;\n  grid-column: 1;\n  min-height: 92vh;\n  background-color: #8053a3;\n}\n#content[_ngcontent-%COMP%]   main[_ngcontent-%COMP%] {\n  grid-row: 2;\n  grid-column: 2;\n  display: flex;\n  justify-content: center;\n  align-self: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksYUFBQTtFQUNBLGdDQUFBO0VBQ0EsNkJBQUE7QUFDSjtBQUFJO0VBQ0UsV0FBQTtFQUNBLGdCQUFBO0FBRU47QUFBSTtFQUNFLFdBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSx5QkFBQTtBQUVOO0FBQUk7RUFDRSxXQUFBO0VBQ0EsY0FBQTtFQUNBLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0FBRU4iLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjY29udGVudCB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDQ1cHggYXV0bztcbiAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDU2cHggYXV0bztcbiAgICBoZWFkZXIge1xuICAgICAgZ3JpZC1yb3c6IDE7XG4gICAgICBncmlkLWNvbHVtbjogMS8zO1xuICAgIH1cbiAgICAjc2lkZWJhcntcbiAgICAgIGdyaWQtcm93OiAyO1xuICAgICAgZ3JpZC1jb2x1bW46IDE7XG4gICAgICBtaW4taGVpZ2h0OiA5MnZoO1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzgwNTNhMztcbiAgICB9XG4gICAgbWFpbntcbiAgICAgIGdyaWQtcm93OiAyO1xuICAgICAgZ3JpZC1jb2x1bW46IDI7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICBhbGlnbi1zZWxmOiBjZW50ZXI7XG4gICAgfVxuICB9Il19 */"]
       });
       /*@__PURE__*/
 
@@ -478,8 +484,11 @@
       "./src/app/books/components/books/books.component.ts");
 
       var routes = [{
-        path: '',
+        path: ':number',
         component: _components_books_books_component__WEBPACK_IMPORTED_MODULE_2__["BooksComponent"]
+      }, {
+        path: '**',
+        redirectTo: '1'
       }];
 
       var BooksRoutingModule = function BooksRoutingModule() {
