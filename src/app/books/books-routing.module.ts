@@ -4,7 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { BooksComponent } from './components/books/books.component';
 
 const routes: Routes = [
-    { path: '', component: BooksComponent },
+  {
+    path: ':number',
+    component: BooksComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '1',
+  },
 ];
 
 @NgModule({
